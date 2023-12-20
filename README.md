@@ -148,3 +148,7 @@ If you find this code useful in your research, please consider citing our paper.
   doi={10.1109/ICRA48891.2023.10160350}
 }
 ```
+
+## NOTE
+
+If you get a runtime error when building pointnet2_ops, remove the old architecture from `TORCH_CUDA_ARCH_LIST` in [setup.py](./Pointnet2_PyTorch/pointnet2_ops/setup.py).
