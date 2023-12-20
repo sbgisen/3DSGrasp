@@ -42,18 +42,18 @@ def farthest_point_sample(point, npoint):
 
 
 
-Test_data_dir = 'PATH_TO_THE_FILE/input/*/test'
-Test_pcd_dir = 'PATH_TO_THE_FILE/gt'
-Train_pcd_dir = 'PATH_TO_THE_FILE/gt'
-Train_data_dir = 'PATH_TO_THE_FILE/input/*/train'
+# Test_data_dir = 'PATH_TO_THE_FILE/input/*/test'
+# Test_pcd_dir = 'PATH_TO_THE_FILE/gt'
+# Train_pcd_dir = 'PATH_TO_THE_FILE/gt'
+# Train_data_dir = 'PATH_TO_THE_FILE/input/*/train'
 
 
-test_data = YcbTest(Test_data_dir, Test_pcd_dir, test_mode=True)
-train_data = YcbTrain(Train_data_dir, Train_pcd_dir)
+# test_data = YcbTest(Test_data_dir, Test_pcd_dir, test_mode=True)
+# train_data = YcbTrain(Train_data_dir, Train_pcd_dir)
 
-# NOTE THAT FOR THE REAL GRASPING EXP THE BATCH SIZE FOR THE TEST LOADER SHOULD BE 1, OTHERWISE IT CAN BE HIGHER
-test_loader = torch.utils.data.DataLoader(test_data, batch_size=1, shuffle=False, num_workers=8)
-train_loader = torch.utils.data.DataLoader(train_data, batch_size=256, shuffle=True, num_workers=16)
+# # NOTE THAT FOR THE REAL GRASPING EXP THE BATCH SIZE FOR THE TEST LOADER SHOULD BE 1, OTHERWISE IT CAN BE HIGHER
+# test_loader = torch.utils.data.DataLoader(test_data, batch_size=1, shuffle=False, num_workers=8)
+# train_loader = torch.utils.data.DataLoader(train_data, batch_size=256, shuffle=True, num_workers=16)
 
 
 def run_net(args, config, train_writer=None, val_writer=None):
