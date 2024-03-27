@@ -1,0 +1,26 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+torch = ">2.1"
+numpy = "*"
+rospkg = "*"
+easydict = "*"
+# pointnet2-ops = "*"
+# pointnet2-ops = {subdirectory = "pointnet2_ops_lib", git = "https://github.com/erikwijmans/Pointnet2_PyTorch.git"}
+torchvision = "*"
+torchaudio = "*"
+pointnet2-ops = {path = "./Pointnet2_PyTorch/pointnet2_ops_lib"}
+chamfer = {path = "./Completion/extensions/chamfer_dist"}
+timm = "*"
+knn-cuda = {file = "https://github.com/unlimblue/KNN_CUDA/releases/download/0.2/KNN_CUDA-0.2-py3-none-any.whl"}
+matplotlib = "*"
+open3d = "*"
+empy = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"
