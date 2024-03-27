@@ -19,9 +19,19 @@ We present a grasping strategy, named 3DSGrasp, that predicts the missing geomet
 # :key: Installations
 To begin, clone this repository locally
 ```bash
-git clone git@github.com:NunoDuarte/3DSGrasp.git
-$ export 3DSG_ROOT=$(pwd)/3DSGrasp
+git clone --recursive git@github.com:sbgisen/3DSGrasp.git
 ```
+
+Update `TORCH_CUDA_ARCH_LIST` in [setup.py](./Pointnet2_PyTorch/pointnet2_ops_lib/setup.py) and [pointnet2_utils.py](./Pointnet2_PyTorch/pointnet2_ops_lib/pointnet2_ops/pointnet2_utils.py) to match your GPU architecture.
+
+```bash
+cd <path/to/your/workspace>
+rosdep install -y --from-paths src --ignore-src -r --rosdistro $ROS_DISTRO
+catkin build threeds_grasp
+cd src/threeds_grasp
+pipenv install
+```
+
 This repo was tested on Ubuntu 20.04 and with ROS Noetic
 
 ## :key: Install requirements for Completion Network:
